@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gabungan Latihan 1,2,3</title>
+        <style>
+
+                selector { properti: nilai; }
+            
+            body {
+                font-family: Arial;
+                background: #f4f8ff;
+                margin: 20px;
+            }
+
+            h1 {
+                color: #1a56b0;
+                text-align: center;
+            }
+
+            #judul {
+                font-size: 24px;
+            }
+
+            .aktif {
+                background: #e6eefb;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th {
+                background: #1a56b0;
+                color: white;
+                padding: 6px;
+            }
+
+            td {
+                border: 1px solid #ccd;
+                padding: 6px;
+            }
+
+            .container {
+                background: white;
+                padding: 20px;
+                border: 1px solid #ccd;
+                border-radius: 8px;
+                max-width: 700px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="judul">Praktikum HTML Form, Tabel, CSS</h1>
+
+        <div class="container">
+            <!-- Latihan 1: HTML Form -->
+            <h2>Latihan 1: HTML Form</h2>
+            <form action="proses.php" method="post">
+                Nama:
+                <input type="text" name="nama" value="Budi Santoso">
+                <br><br>
+
+                Email:
+                <input type="email" name="email" value="budi@mail.com">
+                <br><br>
+
+                Jenis Kelamin:
+                <input type="radio" name="jk" value="L" checked> Laki-laki
+                <input type="radio" name="jk" value="P"> Perempuan
+                <br><br>
+
+                Hobi:
+                <input type="checkbox" name="hobi" value="baca" checked> Membaca
+                <input type="checkbox" name="hobi" value="musik" checked> Musik
+                <input type="checkbox" name="hobi" value="olahraga"> Olahraga
+                <br><br>
+
+                Jurusan:
+                <select name="jurusan">
+                    <option selected>Informatika</option>
+                    <option>Sistem Informasi</option>
+                </select>
+                <br><br>
+
+                Alamat:
+                <textarea name="alamat" rows="3">Jl. Melati No. 1</textarea>
+                <br><br>
+
+                <button type="submit">Kirim</button>
+                <button type="reset">Reset</button>
+            </form>
+
+            <hr>
+
+            <!-- Latihan 2 & 3: Tabel + CSS -->
+            <h2>Latihan 2 & 3: Tabel dan CSS</h2>
+            <table>
+                <caption>Daftar Nilai</caption>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th colspan="2">Nilai</th>
+                </tr>
+                <tr class="aktif">
+                    <td>1</td>
+                    <td>Budi</td>
+                    <td>85</td>
+                    <td>Lulus</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sari</td>
+                    <td>78</td>
+                    <td>Lulus</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Andi</td>
+                    <td>60</td>
+                    <td>Remedial</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
