@@ -1,0 +1,182 @@
+<!-- TUGAS PERTEMUAN 3
+ Nama   : Yoga Rahtama
+ NIM    : 252520061
+ Kelas  : TI - A 3-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Mahasiswa</title>
+
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8ff;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h1 {
+            color: #1a56b0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1a56b0;
+            border-bottom: 2px solid #1a56b0;
+            padding-bottom: 4px;
+        }
+
+        form {
+            background: white;
+            border: 1px solid #ccd;
+            padding: 15px;
+            line-height: 2;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            padding: 5px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background: #1a56b0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background: white;
+        }
+
+        caption {
+            font-weight: bold;
+            padding: 8px;
+        }
+
+        th {
+            background: #1a56b0;
+            color: white;
+            padding: 8px;
+        }
+
+        td {
+            border: 1px solid #ccd;
+            padding: 8px;
+        }
+
+        .aktif {
+            background: #e6eefb;
+            font-weight: bold;
+        }
+
+        .tengah {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Data Mahasiswa</h1>
+
+    <h2>Formulir Mahasiswa</h2>
+    <form action="proses.php" method="post">
+
+        Nama: <input type="text" name="nama"><br>
+
+        Email: <input type="email" name="email"><br>
+
+        Jenis Kelamin:
+        <input type="radio" name="jk" value="L"> Laki-laki
+        <input type="radio" name="jk" value="P"> Perempuan<br>
+
+        Hobi:
+        <input type="checkbox" name="hobi" value="baca"> Membaca
+        <input type="checkbox" name="hobi" value="menyanyi"> Menyanyi
+        <input type="checkbox" name="hobi" value="olahraga"> Olahraga<br>
+
+        Prodi:
+        <select name="prodi">
+            <option>PGSD</option>
+            <option>Teknologi Informasi</option>
+            <option>Teknik Sipil</option>
+            <option>Hukum</option>
+            <option>Manajemen</option>
+        </select><br>
+
+        Alamat:<br>
+        <textarea name="alamat" rows="3" cols="40"></textarea><br>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <h2>Daftar Mahasiswa</h2>
+    <table>
+        <caption>Data 5 Mahasiswa</caption>
+
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Prodi</th>
+                <th>IPK</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>252520001</td>
+                <td>Bagas Dwi</td>
+                <td>Teknik Sipil</td>
+                <td class="tengah">3.40</td>
+            </tr>
+            <tr>
+                <td>252520002</td>
+                <td>Agita Hanif</td>
+                <td>Hukum</td>
+                <td class="tengah">3.75</td>
+            </tr>
+            <tr>
+                <td>252520003</td>
+                <td>Rafly Rezaky </td>
+                <td>Teknologi Informasi</td>
+                <td class="tengah">3.50</td>
+            </tr>
+            <tr>
+                <td>252520004</td>
+                <td>Bagus Surya</td>
+                <td>PGSD</td>
+                <td class="tengah">3.20</td>
+            </tr>
+            <tr>
+                <td>252520005</td>
+                <td>Yogi Tegar</td>
+                <td>Manajemen</td>
+                <td class="tengah">3.85</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr class="aktif">
+                <td colspan="3">Rata-rata IPK</td>
+                <td class="tengah">3.54</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
