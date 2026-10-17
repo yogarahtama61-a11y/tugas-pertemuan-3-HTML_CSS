@@ -1,17 +1,17 @@
 <!-- TUGAS PERTEMUAN 3
- Nama   : Yoga Rahtama
- NIM    : 252520061
- Kelas  : TI - A 3-->
+Nama : Yoga Rahtama
+NIM  : 25252001
+Kelas: TI-A 3-->
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <title>Data Mahasiswa</title>
 
+    <!-- CSS -->
     <style>
-    
+        /* warna latar */
         body {
-            font-family: Arial, sans-serif;
             background: #f4f8ff;
             color: #333;
             max-width: 800px;
@@ -19,33 +19,37 @@
             padding: 0 15px;
         }
 
+        /* Judul halaman */
         h1 {
             color: #1a56b0;
             text-align: center;
         }
 
+        /* sub judul */
         h2 {
             color: #1a56b0;
             border-bottom: 2px solid #1a56b0;
             padding-bottom: 4px;
         }
 
+        /* kotak form */
         form {
             background: white;
             border: 1px solid #ccd;
             padding: 15px;
             line-height: 2;
         }
-
+ 
+        /* kolom pengisian */
         input[type="text"],
         input[type="email"],
         select,
         textarea {
             padding: 5px;
             border: 1px solid #ccc;
-            font-family: Arial, sans-serif;
         }
 
+        /* tombol */
         button {
             background: #1a56b0;
             color: white;
@@ -55,33 +59,33 @@
             cursor: pointer;
         }
 
+        /* mengatur tabel */
         table {
             border-collapse: collapse;
             width: 100%;
             background: white;
         }
 
-        caption {
-            font-weight: bold;
-            padding: 8px;
-        }
-
+        /* mengatur header tabel */
         th {
             background: #1a56b0;
             color: white;
             padding: 8px;
         }
 
+        /* mengatur garis tabel */
         td {
             border: 1px solid #ccd;
             padding: 8px;
         }
 
+        /* mengatur warna dan tebal huruf pada bagian Rata rata ipk  */
         .aktif {
             background: #e6eefb;
             font-weight: bold;
         }
 
+        /* mengatur rata tengah pada kolom ipk */
         .tengah {
             text-align: center;
         }
@@ -90,44 +94,52 @@
 
 <body>
 
+    <!-- judul halaman -->
     <h1>Data Mahasiswa</h1>
 
-    <h2>Formulir Mahasiswa</h2>
+    <!-- Background -->
     <form action="proses.php" method="post">
 
+        <!-- input Nama -->
         Nama: <input type="text" name="nama"><br>
-
+        <!-- input Email -->
         Email: <input type="email" name="email"><br>
 
+        <!-- input Jenis Kelamin(radio button/pilih salah satu) -->
         Jenis Kelamin:
         <input type="radio" name="jk" value="L"> Laki-laki
         <input type="radio" name="jk" value="P"> Perempuan<br>
 
-        Hobi:
-        <input type="checkbox" name="hobi" value="baca"> Membaca
-        <input type="checkbox" name="hobi" value="menyanyi"> Menyanyi
-        <input type="checkbox" name="hobi" value="olahraga"> Olahraga<br>
+        <!-- 4. Checkbox (pilih lebih dari satu) -->
+        UKM:
+        <input type="checkbox" name="UKM" value="Jurnalistik"> Jurnalistik
+        <input type="checkbox" name="UKM" value="Teater"> Teater
+        <input type="checkbox" name="UKM" value="Saintek"> Saintek<br>
 
+        <!-- input Prodi (dropdown/pilih salah satu) -->
         Prodi:
         <select name="prodi">
-            <option>PGSD</option>
             <option>Teknologi Informasi</option>
-            <option>Teknik Sipil</option>
             <option>Hukum</option>
+            <option>Teknik Sipil</option>
+            <option>PGSD</option>
             <option>Manajemen</option>
         </select><br>
 
+        <!-- input Alamat -->
         Alamat:<br>
         <textarea name="alamat" rows="3" cols="40"></textarea><br>
 
+        <!-- tombol submit dan reset -->
         <button type="submit">Kirim</button>
         <button type="reset">Reset</button>
     </form>
 
-    <h2>Daftar Mahasiswa</h2>
+    <!-- Tulisan Data 5 Mahasiswa -->
     <table>
-        <caption>Data 5 Mahasiswa</caption>
+        <h1>Data 5 Mahasiswa</h1>
 
+        <!-- Judul kolom -->
         <thead>
             <tr>
                 <th>NIM</th>
@@ -137,39 +149,41 @@
             </tr>
         </thead>
 
+        <!-- Isi tabel -->
         <tbody>
             <tr>
-                <td>252520001</td>
+                <td>25252001</td>
                 <td>Bagas Dwi</td>
-                <td>Teknik Sipil</td>
+                <td>Hukum</td>
                 <td class="tengah">3.40</td>
             </tr>
             <tr>
-                <td>252520002</td>
-                <td>Agita Hanif</td>
-                <td>Hukum</td>
+                <td>25252002</td>
+                <td>Rafly Rezaky</td>
+                <td>PGSD</td>
                 <td class="tengah">3.75</td>
             </tr>
             <tr>
-                <td>252520003</td>
-                <td>Rafly Rezaky </td>
-                <td>Teknologi Informasi</td>
+                <td>25252003</td>
+                <td>Yogi Tegar</td>
+                <td>Teknik Sipil</td>
                 <td class="tengah">3.50</td>
             </tr>
             <tr>
-                <td>252520004</td>
+                <td>25252004</td>
                 <td>Bagus Surya</td>
-                <td>PGSD</td>
+                <td>Manajemen</td>
                 <td class="tengah">3.20</td>
             </tr>
             <tr>
-                <td>252520005</td>
-                <td>Yogi Tegar</td>
-                <td>Manajemen</td>
+                <td>25252005</td>
+                <td>Evan Nabil</td>
+                <td>Teknologi Informasi</td>
                 <td class="tengah">3.85</td>
             </tr>
         </tbody>
 
+        <!-- Rata rata ipk, colspan untuk menggabungkan kolom -->
         <tfoot>
             <tr class="aktif">
                 <td colspan="3">Rata-rata IPK</td>
